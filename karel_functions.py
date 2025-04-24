@@ -7,14 +7,14 @@ def main():
   turn_right()
   obtain_beeper()
   turn_around()
-  move_til_blocked()
+  wall_move()
   
-  
+
+# My Karel functions
 #Turn right, aka left three times
 def turn_right():
-    turn_left()
-    turn_left()
-    turn_left()
+   for i in range(3):
+        turn_left()
 
 #Move until you find a beeper and then pick it up
 def obtain_beeper():
@@ -27,7 +27,7 @@ def turn_around():
     turn_left()
     turn_left()
 
-#Move forward until you cannot
-def move_til_blocked():
-    while front_is_clear():
-        move()   
+#Move forward to wall
+def wall_move():
+    if front_is_clear():
+        move()     
